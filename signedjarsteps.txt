@@ -1,1 +1,2 @@
 keytool -genkey -alias server -keyalg RSA -keypass password -storepass password -keystore keystore.jks
+keytool -export -alias server -storepass password -file server.cer -keystore keystore.jks
