@@ -1,4 +1,5 @@
 keytool -genkey -alias server -keyalg RSA -keypass password -storepass password -keystore keystore.jks
 keytool -export -alias server -storepass password -file server.cer -keystore keystore.jks
 jarsigner -keystore keystore.jks -signedjar signedjar.jar  invapidocker-0.0.1-SNAPSHOT.jar server
+jarsigner -verify signedjar.jar
 
